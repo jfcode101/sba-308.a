@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* variables */
+:root {
+  /* darker colors */
+  --black-clr: #000;
+  --deep-blue-clr: #003366;
+  --dark-grey-clr: #333333;
+  --teal-clr: #1abc9c;
+
+  /* lighter colors */
+  --white-clr: #fff;
+  --soft-beige-clr: #f5f5dc;
+  --light-gray-clr: #ecf0f1;
+
+  /* bright colors */
+  --sky-blue-clr: #87ceeb;
+  --gold-clr: #ffd700;
+  --coral-clr: #ff7f50;
+}
+
+/* html document */
+html {
+  scroll-behavior: smooth;
+  font-size: 100%;
+
+  /* body */
+  body {
+    background-color: var(--white-clr);
+
+    /* list  */
+    ul {
+      /* list item */
+      li {
+        list-style-type: none;
+
+        /* anchor */
+        a {
+          text-decoration: none;
+          color: var(--white-clr);
+          transition-property: color;
+          transition: 0.3s ease-in-out;
+          &:hover {
+            color: var(--soft-beige-clr);
+          }
+        }
+      }
+    }
+
+    /* header */
+    header {
+      background-color: var(--deep-blue-clr);
+      height: 80px;
+      display: flex;
+      justify-content: space-between;
+
+      /* logo */
+      .logo {
+        border: 1px solid red;
+        width: 80px;
+        margin-left: 2rem;
+        a {
+          /* background-color: var(--white-clr); */
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 100%;
+          text-decoration: none;
+          color: white;
+          span {
+            font-size: 1.25rem;
+          }
+
+          /* logo top */
+          #logo-top {
+            color: var(--gold-clr);
+            font-weight: 500;
+          }
+          /* logo bottom */
+          #logo-bottom {
+            color: var(--coral-clr);
+            font-weight: 700;
+          }
+        }
+      }
+
+      /* navigation bar */
+      .nav-bar {
+        height: inherit;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2rem;
+
+        /* nav-list and nav-user*/
+        .nav-list,
+        .nav-user {
+          display: flex;
+          /* align-items: center; */
+          gap: 2rem;
+        }
+        /* nav-list */
+        .nav-list {
+          margin-right: 4rem;
+        }
+
+        /* nav-user */
+      }
+    }
+  }
+}

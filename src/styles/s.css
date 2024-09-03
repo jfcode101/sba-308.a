@@ -21,97 +21,128 @@
   --sky-blue-clr: #87ceeb;
   --gold-clr: #ffd700;
   --coral-clr: #ff7f50;
+
+  /* fonts */
+  --lato-fnt: "Lato", sans-serif;
+  --playfair-display-fnt: "Playfair Display", serif;
 }
 
 /* html document */
 html {
   scroll-behavior: smooth;
   font-size: 100%;
+}
 
-  /* body */
-  body {
-    background-color: var(--white-clr);
+/* body */
+body {
+  background-color: var(--white-clr);
+  font-family: var(--lato-fnt);
+  position: relative;
+  /* list  */
+  ul {
+    /* list item */
+    li {
+      list-style-type: none;
 
-    /* list  */
-    ul {
-      /* list item */
-      li {
-        list-style-type: none;
-
-        /* anchor */
-        a {
-          text-decoration: none;
-          color: var(--white-clr);
-          transition-property: color;
-          transition: 0.3s ease-in-out;
-          &:hover {
-            color: var(--soft-beige-clr);
-          }
+      /* anchor */
+      a {
+        font-size: 1.15rem;
+        text-decoration: none;
+        color: var(--white-clr);
+        transition-property: color;
+        transition: 0.3s ease-in-out;
+        &:hover {
+          color: var(--gold-clr);
+          text-decoration: underline;
+          text-underline-offset: 0.5rem;
+          text-decoration-thickness: 2px;
         }
       }
     }
+  }
 
-    /* header */
-    header {
-      background-color: var(--deep-blue-clr);
-      height: 80px;
-      display: flex;
-      justify-content: space-between;
+  /* header */
+  header {
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: var(--deep-blue-clr);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    transition: all 0.5s ease-in-out;
+    z-index: 99;
 
-      /* logo */
-      .logo {
-        border: 1px solid red;
-        width: 80px;
-        margin-left: 2rem;
-        a {
-          /* background-color: var(--white-clr); */
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          width: 100%;
-          height: 100%;
-          text-decoration: none;
-          color: white;
-          span {
-            font-size: 1.25rem;
-          }
-
-          /* logo top */
-          #logo-top {
-            color: var(--gold-clr);
-            font-weight: 500;
-          }
-          /* logo bottom */
-          #logo-bottom {
-            color: var(--coral-clr);
-            font-weight: 700;
-          }
-        }
-      }
-
-      /* navigation bar */
-      .nav-bar {
-        height: inherit;
+    box-shadow: 0 2px 4px rgb(100, 100, 100);
+    /* logo */
+    .logo {
+      width: 100px;
+      a {
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
         align-items: center;
-        padding: 0 2rem;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
 
-        /* nav-list and nav-user*/
-        .nav-list,
-        .nav-user {
-          display: flex;
-          /* align-items: center; */
-          gap: 2rem;
+        /* logo top */
+        #logo-top {
+          color: var(--gold-clr);
+          font: normal 500 1rem var(--lato-fnt);
         }
-        /* nav-list */
-        .nav-list {
-          margin-right: 4rem;
+        /* logo bottom */
+        #logo-bottom {
+          color: var(--coral-clr);
+          font: normal 700 1.25rem var(--playfair-display-fnt);
         }
-
-        /* nav-user */
       }
     }
+
+    /* navigation list and user list */
+    .nav-bar .nav-list,
+    .user-list {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    /* navigation bar */
+    /* .nav-bar {
+      .nav-list {
+      }
+    } */
+
+    /* user list */
+    .user-list {
+      /* display: flex;
+      align-items: center;
+      gap: 2rem; */
+
+      .menu {
+        color: var(--white-clr);
+        cursor: pointer;
+        font-size: 2rem;
+        /* z-index might not be necessary */
+        z-index: 99;
+
+        /* display */
+        display: none;
+      }
+    }
+  }
+}
+
+/* media rules */
+
+@media screen and (max-width: 768px) {
+  .nav-bar {
+    display: none;
+  }
+
+  .menu {
   }
 }

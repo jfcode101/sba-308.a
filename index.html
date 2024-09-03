@@ -4,42 +4,69 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SBA-308A</title>
+    <!-- google icons -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- styleshheet -->
     <link rel="stylesheet" href="./src/styles/s.css" />
+
+    <!--  -->
   </head>
   <body>
     <header>
       <!-- logo -->
       <div class="logo" id>
         <a href="#id-home">
-          <span id="logo-top">SBA</span>
-          <span id="logo-bottom">308A</span>
+          <span id="logo-top">SBA-308A</span>
+          <span id="logo-bottom">Library</span>
         </a>
       </div>
       <!-- navigation bar -->
       <nav class="nav-bar">
         <ul class="nav-list">
-          <li class="nav-item"><a href="#id-home" class="nav-link">Home</a></li>
+          <!-- home -->
+          <li class="nav-item active">
+            <a href="#id-home" class="nav-link">Home</a>
+          </li>
+          <!-- about -->
           <li class="nav-item">
             <a href="#id-about" class="nav-link">About</a>
           </li>
+          <!-- services -->
           <li class="nav-item">
             <a href="#id-services" class="nav-link">Services</a>
           </li>
+          <!-- contact -->
           <li class="nav-item">
             <a href="#id-contact" class="nav-link">Contact</a>
           </li>
         </ul>
-        <ul class="nav-user">
-          <!-- login -->
-          <li class="user-credential">
-            <a href="" class="user-link">log in</a>
-          </li>
-          <li class="user-credential">
-            <a href="" class="user-link">sign up</a>
-          </li>
-          <!-- sign up -->
-        </ul>
       </nav>
+      <!-- user action -->
+      <ul class="user-list">
+        <!-- login -->
+        <li class="nav-item">
+          <a href="" class="nav-link">login</a>
+        </li>
+        <!-- sign up -->
+        <li class="nav-item">
+          <a href="" class="nav-link">Signup</a>
+        </li>
+        <!-- menu icon -->
+        <!-- <div class="menu"> -->
+        <span class="material-symbols-rounded menu"> menu </span>
+        <!-- </div> -->
+      </ul>
     </header>
     <main>
       <!-- #1: section — home- -->
@@ -58,5 +85,8 @@
       <section id="id-contact" class="sect sect-contact"></section>
     </main>
     <footer></footer>
+
+    <!-- script  -->
+     <script type="module" src="./src/scripts/index.js"></script>
   </body>
 </html>

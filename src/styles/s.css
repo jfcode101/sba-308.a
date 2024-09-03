@@ -118,10 +118,6 @@ body {
 
     /* user list */
     .user-list {
-      /* display: flex;
-      align-items: center;
-      gap: 2rem; */
-
       .menu {
         color: var(--white-clr);
         cursor: pointer;
@@ -134,6 +130,19 @@ body {
       }
     }
   }
+
+  /* main */
+  main {
+    .sect-home {
+      margin-top: 80px;
+      height: calc(100vh - 80px);
+      background: var(--coral-clr)
+        url("https://images.pexels.com/photos/28115456/pexels-photo-28115456/free-photo-of-a-staircase-with-bookshelves-and-potted-plants.jpeg")
+        no-repeat center/cover fixed;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
 }
 
 /* media rules */
@@ -141,8 +150,5 @@ body {
 @media screen and (max-width: 768px) {
   .nav-bar {
     display: none;
-  }
-
-  .menu {
   }
 }

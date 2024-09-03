@@ -31,6 +31,7 @@
 html {
   scroll-behavior: smooth;
   font-size: 100%;
+  letter-spacing: 1px;
 }
 
 /* body */
@@ -62,7 +63,7 @@ body {
   }
 
   /* header */
-  header {
+  .cls-header {
     width: 100%;
     height: 80px;
     position: fixed;
@@ -76,7 +77,7 @@ body {
     transition: all 0.5s ease-in-out;
     z-index: 99;
 
-    box-shadow: 0 2px 4px rgb(100, 100, 100);
+    box-shadow: 0 2px 4px rgb(18, 18, 18);
     /* logo */
     .logo {
       width: 100px;
@@ -133,14 +134,84 @@ body {
 
   /* main */
   main {
+    /* landing page view */
     .sect-home {
       margin-top: 80px;
-      height: calc(100vh - 80px);
+      height: 350px;
       background: var(--coral-clr)
         url("https://images.pexels.com/photos/28115456/pexels-photo-28115456/free-photo-of-a-staircase-with-bookshelves-and-potted-plants.jpeg")
         no-repeat center/cover fixed;
       object-fit: contain;
       object-position: center;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: var(--white-clr);
+
+      div {
+        background-color: rgba(51, 51, 51, 0.9);
+        padding: 20px;
+        border-radius: 5px;
+        /* heading */
+        .hm-header {
+          text-align: center;
+          h1 {
+            font: normal 700 2.5rem var(--playfair-display-fnt);
+            margin-bottom: 25px;
+          }
+          p {
+            font-size: 1.25rem;
+          }
+          p:last-child {
+            margin-bottom: 25px;
+          }
+        }
+
+        /* search */
+        .hm-search {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          /* search field and search button */
+          #id-search,
+          #id-search-btn {
+            outline: none;
+            border: 0;
+            border-radius: 5px;
+            height: 48px;
+            padding: 0 1rem;
+            transition-property: opacity, outline;
+            transition: 0.5s ease-in-out;
+
+            &:hover {
+              opacity: 0.9;
+              outline: 3px solid var(--teal-clr);
+              outline-offset: -4px;
+            }
+          }
+          /* seearch field */
+          #id-search {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            font: normal 300 1rem var(--lato-fnt);
+          }
+          /*  search button*/
+          #id-search-btn {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            cursor: pointer;
+            color: var(--white-clr);
+            background: var(--teal-clr);
+            font: normal 500 1.25rem var(--playfair-display-fnt);
+
+            &:hover {
+              outline: 2px solid var(--white-clr);
+            }
+          }
+        }
+      }
     }
   }
 }

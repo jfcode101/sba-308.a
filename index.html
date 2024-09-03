@@ -23,7 +23,7 @@
     <!--  -->
   </head>
   <body>
-    <header>
+    <header class="cls-header">
       <!-- logo -->
       <div class="logo" id>
         <a href="#id-home">
@@ -70,7 +70,20 @@
     </header>
     <main>
       <!-- #1: section — home- -->
-      <section id="id-home" class="sect sect-home"></section>
+      <section id="id-home" class="sect sect-home">
+        <div>
+          <header class="hm-header">
+            <h1>SBA-308A Library</h1>
+            <p>Knowledge is power — empower your mind.</p>
+            <p>Looking for your next read.</p>
+          </header>
+
+          <article class="hm-search">
+            <input type="search" name="" id="id-search" placeholder="Book..." />
+            <button id="id-search-btn">Search</button>
+          </article>
+        </div>
+      </section>
 
       <!-- #1: section — about- -->
       <section id="id-about" class="sect sect-about"></section>
@@ -87,6 +100,6 @@
     <footer></footer>
 
     <!-- script  -->
-     <script type="module" src="./src/scripts/index.js"></script>
+    <script type="module" src="./src/scripts/index.js"></script>
   </body>
 </html>

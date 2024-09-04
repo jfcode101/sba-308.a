@@ -242,6 +242,19 @@ body {
   }
 }
 
+/* JavaScript class */
+.book {
+  width: 250px;
+  height: 250px;
+  background-color: var(--deep-blue-clr);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid green;
+  margin: 1rem;
+}
+
 /* media rules */
 
 @media screen and (max-width: 768px) {

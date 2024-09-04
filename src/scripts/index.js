@@ -1,6 +1,7 @@
 import headerChange from "./header.js";
-import { searchBooks } from "./search.js";
-import { displayBooks } from "./displayBooks.js";
+import { displayBooks } from "./displayBooks";
+import { searchBooks } from "./search";
+import { updatePagination } from "./updatePagination.js";
 
 // ********************** headerChange **********************
 // add a content load to the page
@@ -15,7 +16,6 @@ window.addEventListener("resize", () => {
 
 // ********************** headerChange **********************
 
-
 // search field
 const userInput = document.querySelector("#id-search");
 // search button
@@ -25,7 +25,8 @@ const resultContainer = document.querySelector("#id-result");
 
 // gallery
 const gallery = document.querySelector("#id-gallery");
-// pagination
-const pagination = document.querySelector("#id-pagination");
+
 // reading list
 const readingList = document.getElementById("id-reading-list");
+
+

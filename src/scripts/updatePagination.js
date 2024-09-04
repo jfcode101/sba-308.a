@@ -1,5 +1,5 @@
 import { displayBooks } from "./displayBooks";
-import { searchBooks } from "./search";
+import { searchBooks } from "./fetchBooks";
 
 export function updatePagination(totalPages) {
   // pagination

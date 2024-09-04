@@ -1,6 +1,6 @@
 import headerChange from "./header.js";
+import { fetchBoooks } from "./fetchBooks.js";
 import { displayBooks } from "./displayBooks";
-import { searchBooks } from "./search";
 import { updatePagination } from "./updatePagination.js";
 
 // ********************** headerChange **********************
@@ -28,5 +28,3 @@ const gallery = document.querySelector("#id-gallery");
 
 // reading list
 const readingList = document.getElementById("id-reading-list");
-
-

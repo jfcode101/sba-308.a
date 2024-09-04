@@ -1,4 +1,4 @@
-export default function headerChange() {
+export function headerChange() {
   const menu = document.querySelector(".menu");
   const smallDevice = window.matchMedia("(max-width: 768px)").matches;
 

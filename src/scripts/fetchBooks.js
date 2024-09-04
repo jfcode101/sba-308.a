@@ -1,4 +1,4 @@
-export async function fetchBoooks(query, page) {
+export async function fetchBooks(query, page) {
   const fetcBoook = fetch(
     `https://openlibrary.org/search.json?q=${query}&page=${page}`
   );

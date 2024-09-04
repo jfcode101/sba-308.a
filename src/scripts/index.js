@@ -47,6 +47,17 @@ displayReadingList();
 // add a content load to the page
 window.addEventListener("DOMContentLoaded", () => {
   headerChange();
+  userInput.value = "";
+
+  // get the template
+  const template = document.querySelector("#id-footer-template");
+  const footer = document.getElementById("id-footer");
+
+  // clone the template
+  const clone = document.importNode(template.content, true);
+
+  // appent the cloned content to the footer
+  footer.appendChild(clone);
 });
 
 // when the window resizes

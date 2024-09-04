@@ -1,3 +1,5 @@
+// import { displayBooks } from "./displayBooks";
+
 export function updatePagination(totalPages) {
   // pagination
   const pagination = document.querySelector("#id-pagination");
@@ -8,16 +10,28 @@ export function updatePagination(totalPages) {
   for (let i = 1; i <= totalPages; i++) {
     const pageButton = document.createElement("button");
     pageButton.innerText = i;
-    pageButton.onclick = () => {
+    // pageButton.onclick = () => {
+    //   currentPage = i;
+    //   searchBooks(
+    //     userInput.value,
+    //     currentPage,
+    //     booksPerPage,
+    //     displayBooks,
+    //     updatePagination
+    //   );
+    // };
+
+    pageButton.addEventListener("click", () => {
       currentPage = i;
       searchBooks(
-        searchInput.value,
+        userInput.value,
         currentPage,
         booksPerPage,
         displayBooks,
         updatePagination
       );
-    };
+    });
+
     pagination.appendChild(pageButton);
   }
 }

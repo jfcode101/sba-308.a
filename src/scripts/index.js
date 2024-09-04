@@ -2,6 +2,8 @@ import headerChange from "./header.js";
 import { fetchBoooks } from "./fetchBooks.js";
 import { displayBooks } from "./displayBooks";
 import { updatePagination } from "./updatePagination.js";
+import { searchBooks } from "./searchBooks.js";
+import { addToReadingList } from "./addToReadingList.js";
 
 // ********************** headerChange **********************
 // add a content load to the page

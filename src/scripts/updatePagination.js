@@ -1,6 +1,3 @@
-// import { displayBooks } from "./displayBooks";
-// import { searchBooks } from "./fetchBooks";
-
 export function updatePagination(totalPages) {
   // pagination
   const pagination = document.querySelector("#id-pagination");
